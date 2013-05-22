@@ -1,0 +1,29 @@
+name:               xml-parse-utils
+version:            0.1.0.0
+synopsis:           Some utils for xml-conduit
+description:        Very simple utils for xml-conduit
+license:            BSD3
+license-file:       LICENSE
+author:             Dmitry Olshansky
+maintainer:         OlshanskyDR@gmail.com
+category:           Xml, Conduit
+cabal-version:      >= 1.8
+build-type:         Simple
+stability:          Experimental
+
+library
+
+    exposed-modules:    Text.XML.Stream.ParseUtils
+   
+    ghc-options:   -Wall -O2
+
+    build-depends: base         >= 4    && < 5
+                , text          >= 0.11 && < 0.12
+                , conduit       >= 1.0  && < 1.1
+                , xml-conduit   >= 1.1  && < 1.2
+                , xml-types     >= 0.3  && < 0.4
+
+source-repository head
+  type:     git
+  location: git://github.com/odr/xml-parse-utils.git
+
