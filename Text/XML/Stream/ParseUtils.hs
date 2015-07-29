@@ -42,7 +42,7 @@ linearize = CL.filter elemData
 -- | Simple AttrParser utilities
 -- | Parse list of required and list of optional attributes into lists of Text
 parseAttrsT :: [Name] -> [Name] -> XP.AttrParser ([T.Text], [Maybe T.Text])
-parseAttrsT reqs = liftM2 (,) (mapM XP.requireAttr reqs) . mapM XP.optionalAttr 
+parseAttrsT reqs = liftM2 (,) (mapM XP.requireAttr reqs) . mapM XP.attr 
 
 -- | Parse list of required and list of optional attributes into lists of String
 parseAttrsS :: [Name] -> [Name] -> XP.AttrParser ([String], [Maybe String])
